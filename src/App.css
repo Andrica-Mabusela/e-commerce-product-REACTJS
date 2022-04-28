@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.nav-wrapper {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid hsl(223, 64%, 98%);
+  padding: 20px;
+}
+
+nav .menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+nav .menu-wrapper ul {
+  margin-left: 40px;
+  display: flex;
+  list-style: none;
+}
+
+nav .menu-wrapper ul li {
+}
+
+nav .menu-wrapper ul a {
+  text-decoration: none;
+  color: hsl(219, 9%, 45%);
+  margin: 0 10px;
+  font-size: 18px;
+  padding-bottom: 28px;
+}
+
+nav .menu-wrapper ul a:active {
+  border-bottom: 3px solid hsl(26, 100%, 55%);
+}
+
+nav > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+nav > div:last-child > div {
+  position: relative;
+}
+
+nav > div:last-child > div img {
+  width: 20px;
+  height: 20px;
+}
+
+nav > div:last-child > div span {
+  background-color: hsl(26, 100%, 55%);
+  width: 18px;
+  height: 15px;
+  border-radius: 40%;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+nav > div:last-child img:last-child {
+  width: 40px;
+  height: 40px;
+  margin-left: 30px;
+}
+
+main {
+  display: flex;
+}
+
+main section {
+  flex-basis: 300px;
+  max-width: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-top: 70px;
+}
+
+main section:first-child {
+  padding-left: 50px;
+}
+
+main section .product {
+  /* text-align: center; */
+}
+
+main section .product img {
+  border-radius: 10px;
+  width: 80%;
+  height: 320px;
+  margin-bottom: 15px;
+}
+
+main section .thumbnails {
+  display: flex;
+  /* justify-content: center; */
+}
+
+main section .thumbnails img {
+  width: 67px;
+  height: 70px;
+  margin: 11px;
+  border-radius: 10px;
+}
+
+main section .thumbnails img:first-child {
+  margin-left: 0;
+}
+
+main section:last-child {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding-top: 40px;
+}
+
+main section:last-child h5 {
+  color: hsl(26, 100%, 55%);
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+main section:last-child h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+main section:last-child > p {
+  font-size: 16px;
+  color: hsl(219, 9%, 45%);
+  font-weight: 400;
+}
+
+main section:last-child > div {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+
+main section:last-child h4 {
+  font-size: 30px;
+  color: black;
+  font-weight: 600;
+}
+
+main section:last-child > div p {
+  color: hsl(26, 100%, 55%);
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: hsl(25, 100%, 94%);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+main section:last-child > p:last-child {
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+main section:last-child > article {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+main section:last-child > article > div:first-child {
+  background-color: hsl(223, 64%, 98%);
+  width: 130px;
+  border-radius: 8px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main section:last-child > article > div:first-child button {
+  background-color: transparent;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 15px 5px;
+}
+
+main section:last-child > article > div:first-child span {
+  padding: 15px 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+main section:last-child > article > div:first-child img:last-child {
+  margin-left: 10px;
+}
+
+main section:last-child > article > div:last-child button {
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  width: 200px;
+  color: white;
+  border-radius: 5px;
+  margin-left: 5px;
+  box-shadow: 7px 10px 12px hsl(25, 100%, 94%);
+}
+
+main section:last-child > article > div:last-child button span {
+  margin: 5px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* THE OVERLAY STYLES  */
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  background-color: hsl(0, 0%, 0%);
+  opacity: 0.75;
+}
+
+/* MODAL STYLES  */
+.modal {
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  border-radius: 15px;
+  z-index: 20;
+}
+
+.modal .modal-img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.img-icon {
+  background-color: white;
+  padding: 13px 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+}
+
+.img-icon-1 {
+  left: -20px;
+}
+
+.img-icon-2 {
+  right: -20px;
+}
+
+.modal .thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal .thumbnails > div {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+.modal .thumbnails img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-close-wrapper {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.icon-close-wrapper img {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.basket {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 10px 10px 12px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: 10%;
+  top: 80%;
+  z-index: 10;
+}
+
+.basket h3 {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid hsl(223, 64%, 98%);
+}
+
+.basket > div {
+  margin: 10px 0;
+  display: flex;
+  padding: 10px;
+  text-align: left;
+}
+
+.basket > div img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.basket > div p {
+  margin-left: 10px;
+  color: hsl(220, 14%, 75%);
+}
+
+.basket > div p span {
+  color: black;
+  font-weight: 700;
+}
+
+.basket button {
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  width: 90%;
+  padding: 15px 10px;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.cart {
+  cursor: pointer;
+}
